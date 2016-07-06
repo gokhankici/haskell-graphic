@@ -3,7 +3,7 @@ version:             0.1.0.0
 build-type:          Simple
 cabal-version:       >=1.10
 
-executable graphic
+executable haskell-graphic
   hs-source-dirs:      src
   main-is:             Main.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N

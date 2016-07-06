@@ -218,6 +218,10 @@ barChart titles layoutTitle counts color = toRenderable layout
     layout =
                 layout_title .~ layoutTitle
               $ layout_x_axis . laxis_generate .~ autoIndexAxis x_axis_labels
+              $ layout_y_axis . laxis_generate .~ autoScaledIntAxis (LinearAxisParams { _la_labelf    = show
+                                                                                      , _la_nLabels   = 10
+                                                                                      , _la_nTicks    = 50
+                                                                                      })
               $ layout_left_axis_visibility . axis_show_ticks .~ False
               $ layout_plots .~ [plotBars barChart]
               $ def :: Layout PlotIndex Int
